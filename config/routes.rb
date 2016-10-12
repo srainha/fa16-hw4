@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  root :to => redirect('/welcome/index')
+  # redirect_to '/contact', notice: "Redirected from 'help' action"
+  get '/welcome/index', to: 'welcome#index'
+  post '/welcome/index', to: 'welcome#index'
+
+  # get '/students/new', to: 'students#new'
+  # post '/students', to: 'students#create'
+  # post '/teachers', to: 'teachers#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
